@@ -10,6 +10,7 @@ import mayo from "../../imagenes/25.png";
 import gris from "../../imagenes/gris.png";
 import congo from "../../imagenes/congo.png";
 import caballu from "../../imagenes/caballu.png";
+import independiente from "../../imagenes/independiente.png";
 function Equiposinicio() {
   let equipo = gris;
 
@@ -24,8 +25,7 @@ function Equiposinicio() {
     mayo,
     congo,
     caballu,
-    equipo,
-    equipo,
+    independiente,
   ];
 
   return (
