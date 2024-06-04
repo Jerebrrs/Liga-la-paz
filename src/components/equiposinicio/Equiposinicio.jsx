@@ -6,7 +6,10 @@ import dju from "../../imagenes/csdju.png";
 import solna from "../../imagenes/solna.png";
 import sangu from "../../imagenes/sangu.png";
 import malvina from "../../imagenes/malvina.png";
+import mayo from "../../imagenes/25.png";
 import gris from "../../imagenes/gris.png";
+import congo from "../../imagenes/congo.png";
+import caballu from "../../imagenes/caballu.png";
 function Equiposinicio() {
   let equipo = gris;
 
@@ -18,9 +21,9 @@ function Equiposinicio() {
     solna,
     sangu,
     malvina,
-    equipo,
-    equipo,
-    equipo,
+    mayo,
+    congo,
+    caballu,
     equipo,
     equipo,
   ];
