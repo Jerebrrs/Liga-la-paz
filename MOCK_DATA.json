@@ -1,0 +1,29 @@
+[  
+    {
+    "id": 2,
+    "title": "Titulo De Gol",
+    "subtitle": "Subtitulo con lo mas destacado",
+    "description": " Entre una cosa y la otra, el zurdo de 22 años pudo darse el lujo deconocer a sus dos grandes ídolos. Uno, en Boca, Juan Román Riquelme: Es increíble tenerlo acá en el día a día (a Román). Conocérselo y que se haya fijado en mi es algo muy lindo. Todos soñados con conocer a nuestros ídolos. En un partido que le tocó jugar con Unión justo un 24 de junio le permitió dedicar un gol a sus ídolos. A los que cumplen año ese día. Juan Román Riquelme y Lionel Messi. Y lo hizo festejando  como ellos. El festejo del Topo Gigio fue por el festejo de él y de Messi. Son mis dos grandes ídolos, se dio la casualidad que hice el gol en su día de cumpleaños.",
+    "author": "Golmud Airport",
+    "fecha": "11/21/2023",
+    "imageUrl": "https://resizer.glanacion.com/resizer/v2/la-seleccion-argentina-convirtio-15-goles-y-OAMAYC4IP5HSPKBA2VCRGUETNE.JPG?auth=57a96b631e4ee7fe04d9d59b403073a2383b9e83b2175d6ec4b9494bf8caaa18&width=880&height=586&quality=70&smart=true"
+},
+    {
+        "id": 1,
+        "title": "Malvinas subcampeón de la Copa Entre Ríos",
+        "subtitle": "Al malvi no le alcanzo para ser el campeon de entre rios",
+        "description": "El malvi paceño se hizo fuerte de local y empató la serie ganando 2 a 1 en un partido emocionante, pero Victoria de Concordia fue más efectivo en la definición por penales y se impuso 4 a 2, consagrándose campeón de la Copa Entre Ríos.",
+        "author": "ND",
+        "fecha": "01/06/2024",
+        "imageUrl": "https://diariolapaz.ar/storage/upload/2024/05/malvi%20final.jpg"
+    },
+    {
+        "id": 3,
+        "title": "Volvio el Futbol a la ciudad.",
+        "subtitle": "Ingresa a ver todo lo que dejo la fecha, goles, sorpresas y mas.",
+        "description": "Ingresa a ver todo lo que dejo la fecha, goles, sorpresas y mas.Ingresa a ver todo lo que dejo la fecha, goles, sorpresas y mas.Ingresa a ver todo lo que dejo la fecha, goles, sorpresas y mas.Ingresa a ver todo lo que dejo la fecha, goles, sorpresas y mas.Ingresa a ver todo lo que dejo la fecha, goles, sorpresas y mas.Ingresa a ver todo lo que dejo la fecha, goles, sorpresas y mas.",
+        "author": "ND",
+        "fecha": "01/06/2024",
+        "imageUrl": "https://diariolapaz.ar/storage/upload/2024/05/malvi%202.jpg"
+    }
+]

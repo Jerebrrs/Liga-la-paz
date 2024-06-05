@@ -1,7 +1,8 @@
-import { useState } from "react";
+import  { useState } from "react";
 import stylo from "./navbar.module.css";
-import { Link } from "react-scroll";
+import { Link } from "react-router-dom";
 import logo from "../../imagenes/logo.png";
+
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -11,67 +12,21 @@ function Navbar() {
 
   return (
     <div className={stylo.container}>
-      <a className={stylo.logo}>
+      <Link to="/" className={stylo.logo}>
         <img src={logo} alt="logo" />
-      </a>
+      </Link>
       <ul className={`${stylo.navlist} ${menuOpen ? stylo.open : ""}`}>
-        <ul className={`${stylo.navlist} ${menuOpen ? stylo.open : ""}`}>
-          <li>
-            <Link
-              to="hero"
-              spy="true"
-              smooth="true"
-              offset={-70}
-              duration={1000}
-            >
-              Inicio
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="equipos"
-              spy="true"
-              smooth="true"
-              offset={-70}
-              duration={1000}
-            >
-              Equipos
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="estadios"
-              spy="true"
-              smooth="true"
-              offset={-70}
-              duration={1000}
-            >
-              Canchas
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="partidos"
-              spy="true"
-              smooth="true"
-              offset={-70}
-              duration={1000}
-            >
-              Partidos
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="noticias"
-              spy="true"
-              smooth="true"
-              offset={-70}
-              duration={1000}
-            >
-              Noticias
-            </Link>
-          </li>
-        </ul>
+        <li>
+          <Link to="/" className={stylo.navlink}>
+            Inicio
+          </Link>
+        </li>
+        <li>
+          <Link to="/noticias" className={stylo.navlink}>
+            Noticias
+          </Link>
+        </li>
+        {/* Otros enlaces de tu Navbar */}
       </ul>
 
       <div className={stylo.rigchcontent}>

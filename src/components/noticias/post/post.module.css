@@ -1,0 +1,91 @@
+/* post.module.css */
+.LinkContainer {
+    display: contents;
+  }
+.card {
+    width: 22%;
+    background-color: #cfcecd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+    margin: 10px;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(20, 20, 20, 0.2);
+}
+
+.cardImage {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+}
+
+.cardTitle {
+    font-size: 24px;
+    font-weight: bold;
+    padding: 15px;
+    color: #0e0d0c;
+}
+
+.cardBody {
+    padding: 0 15px 15px 15px;
+    color: #2b2e30;
+}
+
+.footer {
+    padding: 15px;
+    font-size: 14px;
+    color: #201f1d;
+}
+
+.byName {
+    font-weight: bold;
+}
+
+/* noticias.module.css */
+.container {
+    padding: 20px;
+    background: linear-gradient(to top, #bac7c0, #cbcec5, #dad5cf);
+    text-align: center;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 11px; /* Ajusta el espacio entre las tarjetas */
+}
+
+.container h1 {
+    color: #0e2038;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 1024px) {
+    .card {
+        width: 30%; /* Reducir el ancho de la tarjeta en pantallas de 1024px */
+    }
+}
+
+@media (max-width: 780px) {
+    .card {
+        width: 45%; /* Reducir el ancho de la tarjeta en pantallas de 780px */
+    }
+}
+
+@media (max-width: 450px) {
+    .card {
+        width: 70%; /* Reducir el ancho de la tarjeta en pantallas de 450px */
+    }
+}
+
+@media (max-width: 320px) {
+    .card {
+        width: 90%; /* Reducir el ancho de la tarjeta en pantallas de 320px */
+    }
+}

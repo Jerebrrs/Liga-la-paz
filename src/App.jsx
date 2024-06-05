@@ -1,20 +1,26 @@
 import "./App.css";
 import Navbar from "./components/navbar/navbar";
 import Inicio from "./components/inicio/Inicio";
-import NoticiasD from "./components/noticiasD/NoticiasD";
 import Footer from "./components/footer/Footer";
 import Publicidad from "./components/publicidad/Publicidad";
-import Equiposinicio from "./components/equiposinicio/Equiposinicio";
+import Noticias from "./components/noticias/Noticias";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Details from "./components/noticias/details/Details";
+
 function App() {
   return (
-    <div>
-      <Navbar />
-      <Inicio />
-      <NoticiasD />
-      <Equiposinicio/>
-      <Publicidad />
-      <Footer />
-    </div>
+    <Router>
+      <div>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Inicio />} />
+          <Route path="/noticias" element={<Noticias />} />
+          <Route path='/noticias/:id' element={<Details />} /> 
+        </Routes>
+        <Publicidad />
+        <Footer />
+      </div>
+    </Router>
   );
 }
 

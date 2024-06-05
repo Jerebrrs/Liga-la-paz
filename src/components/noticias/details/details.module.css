@@ -1,0 +1,107 @@
+.container {
+  padding: 100px;
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  position: relative;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Alineamos el contenido a la izquierda */
+  gap: 24px;
+  max-width: 648px; /* Limitamos el ancho máximo */
+  top: 80px;
+}
+
+.hero h1 {
+  color: black;
+  font-size: 64px;
+  line-height: 77px;
+}
+
+.hero h2 {
+  color: rgb(20, 19, 19);
+  font-size: 24px;
+  line-height: 36px;
+}
+
+.hero p {
+  color: #292626;
+  font-size: 20px;
+  line-height: 150%;
+  max-width: 100%; /* Ajuste el párrafo al 100% del ancho del contenedor */
+  word-wrap: break-word; /* Permita que las palabras se dividan y se ajusten */
+}
+
+.container img {
+  width: 100%; /* La imagen ocupa todo el ancho disponible */
+  max-width: 541px; /* Limitamos el ancho máximo */
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+/* Media queries */
+
+@media (max-width: 1024px) {
+  .container {
+    flex-direction: column; /* Cambiamos a columna en dispositivos más pequeños */
+    align-items: center; /* Centramos el contenido horizontalmente */
+  }
+
+  .hero {
+    max-width: 80%; /* Reducimos el ancho en pantallas de 1024px */
+  }
+
+  .container img {
+    margin-bottom: 20px; /* Agregamos espacio entre la imagen y el texto */
+  }
+}
+
+/* Para resoluciones de 320px */
+@media (max-width: 320px) {
+  .container {
+    padding: 810px; /* Reducir el padding */
+  }
+  .hero {
+    top: 50px; /* Ajustar la posición del hero */
+  }
+  .hero h1 {
+    font-size: 33px;
+    line-height: 77px;
+  }
+}
+
+/* Para resoluciones de 375px */
+@media (max-width: 375px) {
+  .container {
+    padding: 10px; /* Ajustar el padding */
+  }
+
+  .hero h1 {
+    font-size: 40px;
+    line-height: 50px;
+  }
+}
+
+/* Para resoluciones de 450px */
+@media (max-width: 450px) {
+  .container {
+    padding: 60px; /* Ajustar el padding */
+  }
+  .hero {
+    top: 60px; /* Ajustar la posición del hero */
+  }
+}
+
+/* Para resoluciones de 780px */
+@media (max-width: 780px) {
+  .container {
+    padding: 80px 10px; 
+  }
+  .hero {
+    top: 60px; /* Ajustar la posición del hero */
+  }
+}
