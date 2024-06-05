@@ -18,12 +18,16 @@ function Navbar() {
       <ul className={`${stylo.navlist} ${menuOpen ? stylo.open : ""}`}>
         <li>
           <Link to="/" className={stylo.navlink}>
-            Inicio
+          <button className={stylo.btn}>
+              Inicio
+            </button>
           </Link>
         </li>
         <li>
           <Link to="/noticias" className={stylo.navlink}>
-            Noticias
+          <button className={stylo.btn}>
+              Noticias
+            </button>
           </Link>
         </li>
         {/* Otros enlaces de tu Navbar */}

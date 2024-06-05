@@ -1,73 +1,95 @@
 .container {
-    position: relative;
-    width: 100%;
-    height: 386px;
-    overflow: hidden;
-    background-color: aliceblue;
-  }
-  
-  .card {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    transition: opacity 0.5s ease-in-out;
-  }
-  
-  .card h1 {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 30px;
-    line-height: 150%;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    color: #000000;
-  }
-  
-  .card p {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 150%;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    color: #000000;
-  }
-  
-  .card img {
-    width: 220px;
-    height: 220px;
-    border-radius: 10px;
-    margin-top: 10px;
-  }
-  
-  .dots {
-    position: absolute;
-    bottom: 10px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .dot {
-    height: 10px;
-    width: 10px;
-    margin: 0 5px;
-    background-color: #1f1b1b;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-  }
-  
-  .active {
-    background-color: #717171;
-  }
-  
+  position: relative;
+  width: 100%;
+  height: 386px;
+  overflow: hidden;
+  background-color: aliceblue;
+}
+
+.card {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.card h1 {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 150%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #000000;
+}
+
+.card p {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 150%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #000000;
+}
+
+.card img {
+  width: 220px;
+  height: 220px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.dots {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dot {
+  height: 10px;
+  width: 10px;
+  margin: 0 5px;
+  background-color: #1f1b1b;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+.LinkContainer {
+  text-decoration: none; /* Elimina la línea por debajo del enlace */
+}
+
+.btn {
+  color: #431a69;
+  border: 2px solid #0d0b0f;
+  border-radius: 10px;
+  padding: 10px 25px;
+  background: transparent;
+}
+
+.btn:hover {
+  box-shadow: 2px 2px 15px #0d0b0f inset;
+}
+
+.btn:active {
+  box-shadow: 2px 2px 20px #0d0b0f inset;
+}
+

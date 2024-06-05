@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import stylos from "./publicidad.module.css";
-import ana from '../../imagenes/anama.jpeg'
+import ana from "../../imagenes/anama.jpeg";
+
 function Publicidad() {
   const clientes = [
     {
@@ -13,7 +14,7 @@ function Publicidad() {
     {
       name: "Anami Cakes",
       subtitle: "Elaboramos mesas dulces, tortas y mas.. ",
-      image:ana,
+      image: ana,
       sitio: "https://www.instagram.com/anamicakes21",
     },
   ];
@@ -27,7 +28,7 @@ function Publicidad() {
       setCurrentIndex((prevIndex) =>
         prevIndex === clientes.length - 1 ? 0 : prevIndex + 1
       );
-    }, 3000); // Cambia el anuncio cada 3 segundos
+    }, 4000);
     return () => clearInterval(interval);
   }, [clientes.length]);
 
@@ -66,7 +67,14 @@ function Publicidad() {
       <div className={stylos.card}>
         <h1>{clientes[currentIndex].name}</h1>
         <p>{clientes[currentIndex].subtitle}</p>
-        <a href={clientes[currentIndex].sitio}>Ver Mas</a>
+        <a
+          href={clientes[currentIndex].sitio}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={stylos.LinkContainer}
+        >
+          <button className={stylos.btn}>Ver Más</button>
+        </a>
         <img
           src={clientes[currentIndex].image}
           alt={clientes[currentIndex].name}

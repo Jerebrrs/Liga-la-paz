@@ -37,6 +37,7 @@
 .navlist {
   display: flex;
   list-style: none;
+  margin-left: auto;
 }
 
 .navlist a {
@@ -83,7 +84,31 @@
   margin-left: 25px;
   display: none;
 }
+.btn {
+  color: white;
+  text-decoration: none;
+  font-size: 25px;
+  border: none;
+  background: none;
+  font-weight: 400;
+}
 
+.btn::before {
+  margin-left: auto;
+}
+
+.btn::after, button::before {
+  content: '';
+  width: 0%;
+  height: 2px;
+  background: #ffffff;
+  display: block;
+  transition: 0.5s;
+}
+
+.btn:hover::after {
+  width: 100%;
+}
 /* Media Queries */
 @media (max-width: 1320px) {
   .container {
@@ -95,7 +120,9 @@
   .container {
     padding: 11px 4%;
   }
-
+.navlist{
+  margin-left: 70px
+}
   .navlist a {
     font-size: 1.3rem;
     margin: 0 18px;

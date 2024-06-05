@@ -25,7 +25,7 @@ function NoticiasD() {
             <h1>{noticia.title}</h1>
             <p>{noticia.subtitle}</p>
             <Link to={`noticias/${noticia.id}`} className={styles.LinkContainer}>
-              <button>Ver Más</button>
+              <button className={styles.btn}>Ver Más</button>
             </Link>
           </div>
         </div>
