@@ -77,7 +77,7 @@
   text-decoration: none; /* Elimina la línea por debajo del enlace */
 }
 
-.btn {
+/* .btn {
   color: #431a69;
   border: 2px solid #0d0b0f;
   border-radius: 10px;
@@ -91,5 +91,119 @@
 
 .btn:active {
   box-shadow: 2px 2px 20px #0d0b0f inset;
+} */
+/* .btn {
+  transition: all 0.3s ease-in-out;
+  font-family: "Dosis", sans-serif;
 }
 
+.btn {
+  width: 120px;
+  height: 40px;
+  border-radius: 30px;
+  background-image: linear-gradient(to left bottom, #587d68, #49805c, #3b824d, #30843a); 
+  box-shadow: 0 20px 30px -6px rgba(238, 103, 97, 0.5);
+  outline: none;
+  cursor: pointer;
+  border: none;
+  font-size: 15px;
+  color: white;
+}
+
+.btn:hover {
+  transform: translateY(3px);
+  box-shadow: none;
+}
+
+.btn:active {
+  opacity: 0.5;
+} */
+/* .btn {
+  outline: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #40b3a2;
+  min-width: 200px;
+  border: 0;
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  padding: 16px 20px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.btn:hover {
+  opacity: 0.95;
+}
+
+.animation {
+  border-radius: 100%;
+  animation: ripple 0.6s linear infinite;
+}
+
+@keyframes ripple {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.1),
+      0 0 0 20px rgba(255, 255, 255, 0.1), 0 0 0 40px rgba(255, 255, 255, 0.1),
+      0 0 0 60px rgba(255, 255, 255, 0.1);
+  }
+
+  100% {
+    box-shadow: 0 0 0 20px rgba(255, 255, 255, 0.1),
+      0 0 0 40px rgba(255, 255, 255, 0.1), 0 0 0 60px rgba(255, 255, 255, 0.1),
+      0 0 0 80px rgba(255, 255, 255, 0);
+  }
+} */
+@keyframes glowing-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(114, 111, 111, 0.311);
+  }
+
+  70% {
+    box-shadow: 0 0 0 30px rgba(215, 205, 11, 0.083);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+  }
+}
+
+.btn {
+  position: relative;
+  display: inline-block;
+  /* background: linear-gradient(to right, #FFB900, #FF7730); */
+   background: linear-gradient(to right, #050505a0, #222120);
+  border: none;
+  border-radius: 15px;
+  color: white;
+  padding: 9px 10px;
+  font-size: 14px;
+  text-transform: uppercase;
+  box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+  animation: glowing-pulse 2s infinite;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  border-radius: 30px;
+  box-shadow: 0 0 20px #FF7730;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.btn:hover::before {
+  opacity: 1;
+}
