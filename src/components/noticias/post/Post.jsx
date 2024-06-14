@@ -19,7 +19,7 @@ function Post({ id, title, subtitle, author, fecha, imageUrl }) {
 }
 
 Post.propTypes = {
-  id: PropTypes.number.isRequired, // Cambia key a id
+  id: PropTypes.number.isRequired, 
   title: PropTypes.string.isRequired,
   subtitle: PropTypes.string.isRequired,
   author: PropTypes.string.isRequired,

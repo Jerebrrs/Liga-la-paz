@@ -1,0 +1,273 @@
+.container {
+  position: relative;
+  width: 90%;
+  height: 726px;
+  left: 4%;
+  top: 100px;
+  display: flex;
+  justify-content: space-between; /* Ensure children are spaced correctly */
+  flex-wrap: wrap; /* Ensure children are spaced correctly */
+}
+
+.seccionform {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    #ffffff;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero {
+  width: 50%;
+  height: 100%;
+  background-image: linear-gradient(
+    to right bottom,
+    #000000,
+    #060505,
+    #0b0a09,
+    #0f0e0d,
+    #121210
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero h1 {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  top: 100px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 150%;
+  text-align: center;
+  color: #ffffff;
+}
+
+.hero h2 {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  top: 140px;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 150%;
+  text-align: center;
+  color: #ffffff;
+}
+
+.hero p {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  top: 500px;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 150%;
+  text-align: center;
+  color: #7f7a7a;
+}
+
+.hero img {
+  width: auto;
+  height: 50%;
+  margin-bottom: 10px;
+}
+
+.formcontrol {
+  width: 100%;
+  max-width: 400px;
+  background-color: #ffffff;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+  display: flexbox;
+  justify-content: center;
+  flex-direction: column;
+  padding: 40px;
+  border-radius: 8px;
+}
+
+.titlet {
+  font-size: 28px;
+  font-weight: 800;
+  color: #000000;
+}
+
+.inputfield {
+  position: relative;
+  width: 100%;
+}
+
+.inputt {
+  margin-top: 15px;
+  width: 100%;
+  outline: none;
+  border-radius: 8px;
+  height: 45px;
+  border: 1.5px solid #2b562b;
+  background: transparent;
+  padding-left: 10px;
+}
+
+.inputt:focus {
+  border: 1.5px solid #2d79f3;
+}
+
+.inputt:focus ~ .labell,
+.inputt:valid ~ .labell {
+  top: -10px;
+  left: 10px;
+  font-size: 12px;
+  color: #2d79f3;
+  background-color: #ffffff;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.labell {
+  position: absolute;
+  top: 25px;
+  left: 15px;
+  color: #ccc;
+  transition: all 0.3s ease;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.submitbtn {
+  margin-top: 30px;
+  height: 55px;
+  background: #f2f2f2;
+  border-radius: 11px;
+  border: 0;
+  outline: none;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 700;
+  background: linear-gradient(180deg, #363636 0%, #1b1b1b 50%, #000000 100%);
+  box-shadow: 0px 0px 0px 0px #ffffff, 0px 0px 0px 0px #000000;
+  transition: all 0.3s cubic-bezier(0.15, 0.83, 0.66, 1);
+  cursor: pointer;
+}
+
+.submitbtn:hover {
+  box-shadow: 0px 0px 0px 2px #ffffff, 0px 0px 0px 4px #0000003a;
+}
+
+/* Responsive Design */
+@media (max-width: 1124px) {
+  .container {
+    width: 90%;
+    top: 50px;
+  }
+  /* .seccionform {
+    width: 50%;
+    transform: translateX(-50%);
+  } */
+  /* .hero {
+    width: 40%;
+    left: 5%;
+    top: 50px;
+  } */
+  .hero img,
+  .hero h1,
+  .hero h2,
+  .hero p {
+    position: relative;
+    left: 0;
+    top: 0;
+    text-align: center;
+  }
+  .hero img {
+    width: 70%;
+    margin: 0 auto;
+  }
+  .formcontrol {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 780px) {
+  .container {
+    width: 90%;
+    height: auto;
+    top: 60px;
+  }
+  .seccionform {
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .formcontrol {
+    width: 100%;
+    height: 100%; /* Ensure the form control takes full height */
+    max-width: none; /* Override max-width */
+    padding: 20px; /* Adjust padding as needed */
+    justify-content: center; /* Center form control vertically */
+    align-items: center; /* Center form control horizontally */
+  }
+  .hero {
+    width: 100%;
+  }
+  .hero h1,
+  .hero h2,
+  .hero p {
+    display: none;
+  }
+  .hero img {
+    width: 30%;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 480px) {
+  .container {
+    width: 90%;
+    left: 5%;
+  }
+  .hero {
+    width: 100%;
+    left: 0;
+  }
+  .hero img {
+    width: 70%;
+  }
+}
+
+@media (max-width: 375px) {
+  .container {
+    top: 20px;
+    width: 90%;
+  }
+  .hero img {
+    width: 80%;
+  }
+  .seccionform {
+    width: 100%;
+    left: 0;
+  }
+}
+
+@media (max-width: 320px) {
+  .container {
+    width: 90%;
+    top: 10px;
+  }
+  .hero img {
+    width: 90%;
+  }
+  .seccionform {
+    width: 100%;
+    left: 0;
+  }
+}
