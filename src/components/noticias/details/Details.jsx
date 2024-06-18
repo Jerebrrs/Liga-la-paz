@@ -18,9 +18,9 @@ function Details() {
       <div className={stylos.hero}>
         <h1>{postDetails.title}</h1>
         <h2>{postDetails.subtitle}</h2>
+        <img src={postDetails.image} alt={postDetails.title} />
         <p>{postDetails.description}</p>
       </div>
-      <img src={postDetails.image} alt={postDetails.title} />
     </div>
   );
 }

@@ -16,6 +16,7 @@ function CreatePost() {
   const [postData, setPostData] = useState({
     title: "",
     subtitle: "",
+    categoria:"",
     description: "",
     image: null,
     userId: user ? user.id : "",
@@ -42,6 +43,7 @@ function CreatePost() {
     formData.append("title", postData.title);
     formData.append("subtitle", postData.subtitle);
     formData.append("description", postData.description);
+    formData.append("categoria", postData.categoria);
     formData.append("image", postData.image); // Agrega la imagen al FormData
     formData.append("userId", postData.userId);
 
@@ -52,6 +54,7 @@ function CreatePost() {
       setPostData({
         title: "",
         subtitle: "",
+        categoria: "",
         description: "",
         image: null,
         userId: user.id,
@@ -76,6 +79,10 @@ function CreatePost() {
       <div>
         <label>Description</label>
         <textarea name="description" onChange={handleChange} required />
+      </div>
+      <div>
+        <label>Cateoria</label>
+        <textarea name="categoria" onChange={handleChange} required />
       </div>
       <div>
         <label>Image URL</label>

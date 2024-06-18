@@ -116,6 +116,7 @@
   border: 1.5px solid #2b562b;
   background: transparent;
   padding-left: 10px;
+  color: #000000;
 }
 
 .inputt:focus {

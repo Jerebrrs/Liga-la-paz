@@ -11,10 +11,12 @@ import Home from "./components/dashboard/home/Home";
 import CreatePost from "./components/dashboard/createPost/CreatePost";
 import { useDispatch } from "react-redux";
 import { useEffect } from "react";
-import { LOGIN_SUCCESS } from "./redux/actions.type";
+import { LOGIN_FAILURE, LOGIN_SUCCESS } from "./redux/actions.type";
+import { jwtDecode } from "jwt-decode";
 
-axios.defaults.baseURL = "http://localhost:3000";
-
+const apiBack = "https://backend-lpf.onrender.com"
+axios.defaults.baseURL = apiBack;
+console.log("API Backend URL:", apiBack);
 const token = localStorage.getItem("token");
 
 if (token) {
@@ -30,11 +32,26 @@ function App() {
 
     if (token && userString) {
       const userObject = JSON.parse(userString);
-      // Despachar la acción solo si el usuario está presente
       dispatch({
         type: LOGIN_SUCCESS,
         payload: userObject,
       });
+
+      const decodedToken = jwtDecode(token);
+      const expirationTime = decodedToken.exp * 1000 - 60000; // 1 minuto antes de la expiración
+
+      const checkTokenExpiration = setInterval(() => {
+        if (Date.now() >= expirationTime) {
+          clearInterval(checkTokenExpiration);
+          localStorage.removeItem("token");
+          localStorage.removeItem("user");
+          delete axios.defaults.headers.common["Authorization"];
+          dispatch({ type: LOGIN_FAILURE });
+          window.location.href = "/login";
+        }
+      }, 1000);
+
+      return () => clearInterval(checkTokenExpiration);
     }
   }, [dispatch]);
 
@@ -42,7 +59,6 @@ function App() {
   if (token) {
     axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;
   } else {
-    // Si no hay token, elimina el encabezado de autorización de Axios
     delete axios.defaults.headers.common["Authorization"];
   }
   return (
