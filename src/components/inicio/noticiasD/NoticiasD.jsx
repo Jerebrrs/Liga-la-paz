@@ -1,13 +1,20 @@
+import { useDispatch, useSelector } from "react-redux";
 import styles from "./noticias.module.css";
-import data from "../../../../MOCK_DATA.json";
+
 import { Link } from "react-router-dom";
+import { getPost } from "../../../redux/actions";
+import { useEffect } from "react";
 function NoticiasD() {
-  // Obtener las dos últimas noticias principales
-  const ultimasNoticias = data.slice(-2);
+  const allPost = useSelector((state) => state.allPost);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getPost());
+  }, [dispatch]);
 
   return (
     <div className={styles.container}>
-      {ultimasNoticias.map((noticia, index) => (
+      {allPost.map((noticia, index) => (
         <div
           key={index}
           className={
@@ -16,7 +23,7 @@ function NoticiasD() {
               : `${styles.card} ${styles["card-reverse"]}`
           }
         >
-          <img src={noticia.imageUrl} alt="cancha" />
+          <img src={noticia.image} alt="cancha" />
           <div
             className={
               index % 2 === 0 ? styles["card-content"] : styles["cardreverse"]
@@ -24,7 +31,10 @@ function NoticiasD() {
           >
             <h1>{noticia.title}</h1>
             <p>{noticia.subtitle}</p>
-            <Link to={`noticias/${noticia.id}`} className={styles.LinkContainer}>
+            <Link
+              to={`noticias/${noticia.id}`}
+              className={styles.LinkContainer}
+            >
               <button className={styles.btn}>Ver Más</button>
             </Link>
           </div>
