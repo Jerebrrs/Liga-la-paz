@@ -16,7 +16,7 @@ function Footer() {
               alt="social"
             />
           </a>
-          <a href="#">
+          <a href="https://www.instagram.com/lapaz.futbol">
             <img
               src={instagram}
               alt="social"
