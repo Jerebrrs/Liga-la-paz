@@ -10,7 +10,7 @@ function Footer() {
       <div>
         <h1>Liga Paceña de Futbo 2024</h1>
         <div className={stylos.social}>
-          <a href="#">
+          <a href="https://www.facebook.com/profile.php?id=61561362082287">
             <img
               src={facebook}
               alt="social"

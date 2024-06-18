@@ -9,6 +9,13 @@ function CreatePost() {
   const navigate = useNavigate();
   const user = useSelector((state) => state.user);
 
+  const categorias = [
+    "Futbol Primera",
+    "Futsal Masculino",
+    "Futsal Femenino",
+    "Promocional",
+  ];
+
   if (!user) {
     navigate("/login");
   }
@@ -16,7 +23,7 @@ function CreatePost() {
   const [postData, setPostData] = useState({
     title: "",
     subtitle: "",
-    categoria:"",
+    categoria: "",
     description: "",
     image: null,
     userId: user ? user.id : "",
@@ -82,7 +89,17 @@ function CreatePost() {
       </div>
       <div>
         <label>Cateoria</label>
-        <textarea name="categoria" onChange={handleChange} required />
+        <select name="categoria" onChange={handleChange} required>
+          {categorias
+            ? categorias.map((option, i) => {
+                return (
+                  <option key={i} value={option}>
+                    {option}
+                  </option>
+                );
+              })
+            : null}
+        </select>
       </div>
       <div>
         <label>Image URL</label>
