@@ -1,5 +1,8 @@
 import stylos from "./footer.module.css";
 import logo from "../../imagenes/logo.png";
+import instagram from "../../imagenes/instagram.png";
+import facebook from "../../imagenes/facebook.png";
+import whatsapp from "../../imagenes/whatsapp.png";
 
 function Footer() {
   return (
@@ -9,19 +12,19 @@ function Footer() {
         <div className={stylos.social}>
           <a href="#">
             <img
-              src="https://cdn.icon-icons.com/icons2/1211/PNG/512/1491580635-yumminkysocialmedia26_83102.png"
+              src={facebook}
               alt="social"
             />
           </a>
           <a href="#">
             <img
-              src="https://cdn.icon-icons.com/icons2/1195/PNG/512/1490889652-facebook_82510.png"
+              src={instagram}
               alt="social"
             />
           </a>
           <a href="https://api.whatsapp.com/send?phone=+5493435330498&text=Hola, vengo de la web de LPF quisiera aportar informacion sobre un tema!" target={"_blank"}>
             <img
-              src="https://cdn.icon-icons.com/icons2/2429/PNG/512/whatsapp_logo_icon_147205.png"
+              src={whatsapp}
               alt="social"
             />
           </a>
