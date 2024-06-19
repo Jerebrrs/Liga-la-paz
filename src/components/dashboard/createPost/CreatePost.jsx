@@ -89,7 +89,7 @@ function CreatePost() {
       </div>
       <div>
         <label>Cateoria</label>
-        <select name="categoria" onChange={handleChange} required>
+        {/* <select name="categoria" onChange={handleChange} required>
           {categorias
             ? categorias.map((option, i) => {
                 return (
@@ -99,7 +99,8 @@ function CreatePost() {
                 );
               })
             : null}
-        </select>
+        </select> */}
+               <input type="text" name="categoria" onChange={handleChange} required />
       </div>
       <div>
         <label>Image URL</label>
