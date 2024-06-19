@@ -25,6 +25,7 @@ function Noticias() {
             author={info.userId}
             fecha={info.createdAt}
             imageUrl={info.image}
+            categoria={info.categoria}
           />
         ))}
       </div>
