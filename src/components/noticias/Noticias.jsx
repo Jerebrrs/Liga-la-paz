@@ -14,7 +14,7 @@ function Noticias() {
 
   return (
     <div className={stylos.container}>
-      <h1>Noticias Destacadas De La Liga</h1>
+      <h1>Noticias Destacadas</h1>
       <div className={stylos.cards}>
         {allPost.slice(0, 8).map((info) => (
           <Post
@@ -22,10 +22,9 @@ function Noticias() {
             id={info.id}
             title={info.title}
             subtitle={info.subtitle}
-            author={info.userId}
-            fecha={info.createdAt}
             imageUrl={info.image}
             categoria={info.categoria}
+            fecha={info.createdAt}
           />
         ))}
       </div>

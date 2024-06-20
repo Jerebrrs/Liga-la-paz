@@ -9,12 +9,12 @@ function CreatePost() {
   const navigate = useNavigate();
   const user = useSelector((state) => state.user);
 
-  const categorias = [
-    "Futbol Primera",
-    "Futsal Masculino",
-    "Futsal Femenino",
-    "Promocional",
-  ];
+  // const categorias = [
+  //   "Futbol Primera",
+  //   "Futsal Masculino",
+  //   "Futsal Femenino",
+  //   "Promocional",
+  // ];
 
   if (!user) {
     navigate("/login");
