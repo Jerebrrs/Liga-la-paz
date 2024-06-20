@@ -1,5 +1,4 @@
 .container {
-  padding: 2%;
   min-height: 100vh;
   width: 100%;
   display: flex;
@@ -186,7 +185,7 @@
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 480px) and (min-width: 376px) {
   .card {
     align-items: center;
     justify-content: center;
@@ -210,6 +209,69 @@
     padding: 8px 16px;
   }
 
+  .card-content {
+    margin-bottom: 20px; /* Added margin to the bottom of card content */
+  }
+}
+@media (max-width: 475px) and (min-width: 321px) {
+  .container {
+    width: 100%;
+  }
+  .card {
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0px 2px;
+  }
+
+  .card h1 {
+    font-size: 20px;
+  }
+
+  .card img {
+    width: 100%;
+  }
+
+  .card p {
+    font-size: 15px;
+  }
+
+  .card button {
+    padding: 3px 10px;
+  }
+  .btn {
+    font-size: 12px;
+  }
+  .card-content {
+    margin-bottom: 20px; /* Added margin to the bottom of card content */
+  }
+}
+@media (max-width: 320px) and (min-width: 280px) {
+  .card {
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0px 2px;
+  }
+
+  .card h1 {
+    font-size: 20px;
+  }
+
+  .card img {
+    width: 100%;
+  }
+
+  .card p {
+    font-size: 12px;
+  }
+
+  .card button {
+    padding: 3px 10px;
+  }
+  .btn {
+    font-size: 12px;
+  }
   .card-content {
     margin-bottom: 20px; /* Added margin to the bottom of card content */
   }

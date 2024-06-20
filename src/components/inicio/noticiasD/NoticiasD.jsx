@@ -40,6 +40,9 @@ function NoticiasD() {
           </div>
         </div>
       ))}
+      <Link className={styles.LinkContainer} to={"/noticias"}>
+        <h1 className={styles.btn}>Todas las Noticias</h1>
+      </Link>
     </div>
   );
 }
