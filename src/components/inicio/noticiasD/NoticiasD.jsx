@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { getPost } from "../../../redux/actions";
 import { useEffect } from "react";
 function NoticiasD() {
-  const allPost = useSelector((state) => state.allPost);
+  const allPost = useSelector((state) => state.allPost.slice(0, 2));
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -17,18 +17,15 @@ function NoticiasD() {
       {allPost.map((noticia, index) => (
         <div
           key={index}
-          className={
-            index % 2 === 0
-              ? styles.card
-              : `${styles.card} ${styles["card-reverse"]}`
-          }
+          // className={
+          //   index % 2 === 0
+          //     ? styles.card
+          //     : `${styles.card} ${styles["card-reverse"]}`
+          // }
+          className={styles.card}
         >
           <img src={noticia.image} alt="cancha" />
-          <div
-            className={
-              index % 2 === 0 ? styles["card-content"] : styles["cardreverse"]
-            }
-          >
+          <div className={styles["card-content"]}>
             <h1>{noticia.title}</h1>
             <p>{noticia.subtitle}</p>
             <Link

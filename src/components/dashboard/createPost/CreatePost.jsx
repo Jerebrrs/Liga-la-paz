@@ -10,8 +10,8 @@ function CreatePost() {
   const user = useSelector((state) => state.user);
 
   const categorias = [
-    "1° Divición Masculina",
-    "1° Divición Femenina",
+    "1° División Masculina",
+    "1° División Femenina",
     "Futsal Femenino",
     "Futsal Masculino",
     "Reserva",
