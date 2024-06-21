@@ -9,12 +9,13 @@ function CreatePost() {
   const navigate = useNavigate();
   const user = useSelector((state) => state.user);
 
-  // const categorias = [
-  //   "Futbol Primera",
-  //   "Futsal Masculino",
-  //   "Futsal Femenino",
-  //   "Promocional",
-  // ];
+  const categorias = [
+    "1° Divición Masculina",
+    "1° Divición Femenina",
+    "Futsal Femenino",
+    "Futsal Masculino",
+    "Reserva",
+  ];
 
   if (!user) {
     navigate("/login");
@@ -47,6 +48,9 @@ function CreatePost() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const formData = new FormData();
+
+    console.log(formData);
+
     formData.append("title", postData.title);
     formData.append("subtitle", postData.subtitle);
     formData.append("description", postData.description);
@@ -77,19 +81,26 @@ function CreatePost() {
       <h1>Crea Tu noticia siguiendo los parametros minimos</h1>
       <div>
         <label>Title</label>
-        <input type="text" name="title" onChange={handleChange} required />
+        <input
+          type="text"
+          name="title"
+          onChange={handleChange}
+          required
+          spellCheck="true"
+        />
       </div>
       <div>
         <label>Subtitle</label>
-        <input type="text" name="subtitle" onChange={handleChange} required />
+        <input type="text" name="subtitle" onChange={handleChange} required spellCheck="true" />
       </div>
       <div>
         <label>Description</label>
-        <textarea name="description" onChange={handleChange} required />
+        <textarea name="description" onChange={handleChange} required spellCheck="true" />
       </div>
       <div>
-        <label>Cateoria</label>
-        {/* <select name="categoria" onChange={handleChange} required>
+        <label htmlFor="categoria">Cateoria</label>
+        <select name="categoria" onChange={handleChange} required>
+          <option value="">Categoria</option>
           {categorias
             ? categorias.map((option, i) => {
                 return (
@@ -99,8 +110,7 @@ function CreatePost() {
                 );
               })
             : null}
-        </select> */}
-               <input type="text" name="categoria" onChange={handleChange} required />
+        </select>
       </div>
       <div>
         <label>Image URL</label>
