@@ -1,3 +1,285 @@
+/* .container {
+  position: fixed;
+  width: 100%;
+  height: 70px;
+  z-index: 1000;
+  padding: 11px 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-end-end-radius: 20px;
+  transition: all 0.5s ease;
+  background-size: cover;
+  background-position: center;
+  background-image: linear-gradient(
+    to right top,
+    #050a11,
+    #05080f,
+    #05060c,
+    #040509,
+    #030306,
+    #030406,
+    #040507,
+    #050607,
+    #08090a,
+    #0b0d0d,
+    #0e1010,
+    #101212
+  );
+}
+
+.hide {
+  display: none !important;
+}
+
+.logo img {
+  width: auto;
+  height: 100px;
+  padding: 10px;
+  filter: drop-shadow(0px 0px 2px #ffffff);
+}
+
+.navlist {
+  display: flex;
+  list-style: none;
+  margin-left: auto;
+}
+
+.navlist a {
+  display: inline-block;
+  margin: 0 22px;
+  color: beige;
+  font-size: 1.4rem;
+  transition: all 0.6s ease;
+  text-decoration: none;
+}
+
+.navlist a:hover {
+  color: rgb(219, 210, 81);
+}
+
+.rightContent {
+  display: flex;
+  align-items: center;
+}
+
+.btnLogin {
+  display: inline-block;
+  padding: 9px 24px;
+  background: transparent;
+  border: 2px solid beige;
+  border-radius: 8px;
+  color: antiquewhite;
+  font-size: 9px;
+  font-weight: 500;
+  transition: all 0.6s ease;
+  display: none;
+}
+
+.btnLogin:hover {
+  transform: translateY(-5px);
+  border: 2px solid rgb(219, 210, 81);
+  color: rgb(219, 210, 81);
+}
+
+.menuIcon {
+  font-size: 42px;
+  z-index: 10001;
+  cursor: pointer;
+  margin-left: 25px;
+  display: none;
+}
+
+.btn {
+  color: white;
+  text-decoration: none;
+  font-size: 25px;
+  border: none;
+  background: none;
+  font-weight: 400;
+}
+
+.btn::before {
+  margin-left: auto;
+}
+
+.btn::after,
+button::before {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: #ffffff;
+  display: block;
+  transition: 0.5s;
+}
+
+.btn:hover::after {
+  width: 100%;
+}
+
+.social {
+  display: flex;
+  gap: 10px;
+  display: none;
+}
+
+.social img {
+  width: 30px;
+  height: 30px;
+}
+
+.closeMenu {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  display: none;
+}
+
+@media (max-width: 1320px) {
+  .container {
+    padding: 11px 5%;
+  }
+}
+
+@media (max-width: 1025px) {
+  .container {
+    padding: 11px 4%;
+  }
+  .navlist {
+    margin-left: 70px;
+  }
+  .navlist a {
+    font-size: 1.3rem;
+    margin: 0 18px;
+  }
+
+  .btnLogin {
+    display: none;
+  }
+}
+
+@media (max-width: 769px) {
+  .menuIcon {
+    display: block;
+  }
+  .navlist {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.9);
+    transition: all 0.3s ease;
+  }
+
+  .navlist.open {
+    right: 0;
+  }
+
+  .closeMenu {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+    z-index: 1001;
+  }
+
+  .navlist a {
+    display: block;
+    margin: 20px 0;
+    font-size: 1.5rem;
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .social {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    position: absolute;
+    bottom: 20px;
+  }
+
+  .social a {
+    margin: 0 10px;
+  }
+
+  .menuIcon svg {
+    display: block;
+    width: auto;
+    height: 60px;
+  }
+  .open.closeMenu {
+    display: block;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 4%;
+  }
+
+  .navlist {
+    padding: 10px;
+  }
+
+  .navlist a {
+    margin: 10px 0;
+    font-size: 1.5rem;
+  }
+
+  .logo img {
+    width: auto;
+    height: 82px;
+  }
+
+  .menuIcon {
+    display: block;
+    font-size: 100px;
+  }
+
+  .menuIcon svg {
+    display: block;
+    width: auto;
+    height: 55px;
+  }
+  .closeMenu {
+    display: none;
+  }
+}
+
+@media (max-width: 320px) {
+  .container {
+    padding: 4%;
+  }
+
+  .navlist {
+    padding: 30px 15px;
+  }
+
+  .navlist a {
+    margin: 8px 0;
+    font-size: 1.3rem;
+  }
+
+  .menuIcon {
+    display: block;
+  }
+} */
 .container {
   position: fixed;
   width: 100%;
@@ -28,6 +310,10 @@
   );
 }
 
+.hide {
+  display: none !important;
+}
+
 .logo img {
   width: auto;
   height: 100px;
@@ -54,12 +340,12 @@
   color: rgb(219, 210, 81);
 }
 
-.rigchcontent {
+.rightContent {
   display: flex;
   align-items: center;
 }
 
-.btnlogin {
+.btnLogin {
   display: inline-block;
   padding: 9px 24px;
   background: transparent;
@@ -72,19 +358,20 @@
   display: none;
 }
 
-.btnlogin:hover {
+.btnLogin:hover {
   transform: translateY(-5px);
   border: 2px solid rgb(219, 210, 81);
   color: rgb(219, 210, 81);
 }
 
-.bxmenu {
+.menuIcon {
   font-size: 42px;
   z-index: 10001;
   cursor: pointer;
   margin-left: 25px;
   display: none;
 }
+
 .btn {
   color: white;
   text-decoration: none;
@@ -111,7 +398,43 @@ button::before {
 .btn:hover::after {
   width: 100%;
 }
-/* Media Queries */
+
+.social {
+  display: flex;
+  gap: 10px;
+  display: none;
+}
+
+.social img {
+  width: 30px;
+  height: 30px;
+}
+
+.closeMenu {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  display: none;
+}
+.logoCenter {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px; 
+}
+
+.logoCenter img {
+  width: 100px; 
+  height: auto;
+}
 @media (max-width: 1320px) {
   .container {
     padding: 11px 5%;
@@ -130,46 +453,79 @@ button::before {
     margin: 0 18px;
   }
 
-  .btnlogin {
+  .btnLogin {
     display: none;
   }
 }
 
 @media (max-width: 769px) {
-  .bxmenu {
+  .menuIcon {
     display: block;
   }
-
   .navlist {
-    position: absolute;
-    width: 100%;
-    height: 50ch;
-    padding: 10px 50px;
+    position: fixed;
     top: 0;
-    right: 0;
-    bottom: 0;
-    left: 100%;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
     display: flex;
     flex-direction: column;
-    backdrop-filter: blur(55px);
-    transition: all 0.6s ease-in-out;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.9);
+    transition: all 0.3s ease;
+  }
+
+  .navlist.open {
+    right: 0;
+  }
+
+  .closeButton {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+    z-index: 1001;
+    display: block; /* Mostrar el botón de cierre en el menú lateral */
   }
 
   .navlist a {
     display: block;
-    padding: 0;
-    margin: 0px 0px 25px 0px;
-    font-size: 1.7rem;
-    color: #030306;
+    margin: 20px 0;
+    font-size: 1.5rem;
+    color: #fff;
+    text-decoration: none;
   }
 
-  .navlist.open {
-    left: 0;
+  .social {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    position: absolute;
+    bottom: 20px;
   }
-  .bxmenu svg {
+
+  .social a {
+    margin: 0 10px;
+  }
+
+  .menuIcon svg {
     display: block;
     width: auto;
     height: 60px;
+  }
+  .logoCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom:10px; /* Ajusta el margen según sea necesario */
+  }
+  
+  .logoCenter img {
+    width: 100px; /* Ajusta el tamaño del logo según tus necesidades */
+    height: auto;
   }
 }
 
@@ -179,26 +535,31 @@ button::before {
   }
 
   .navlist {
-    padding: 5px 2px;
+    padding: 10px;
   }
 
   .navlist a {
     margin: 10px 0;
     font-size: 1.5rem;
   }
+
   .logo img {
     width: auto;
     height: 82px;
   }
-  .bxmenu {
+
+  .menuIcon {
     display: block;
     font-size: 100px;
   }
 
-  .bxmenu svg {
+  .menuIcon svg {
     display: block;
     width: auto;
     height: 55px;
+  }
+  .closeMenu {
+    display: flex; /* Ocultar el botón de cierre en el menú desplegado */
   }
 }
 
@@ -216,7 +577,7 @@ button::before {
     font-size: 1.3rem;
   }
 
-  .bxmenu {
+  .menuIcon {
     display: block;
   }
 }
